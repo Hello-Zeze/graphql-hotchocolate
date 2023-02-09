@@ -7,11 +7,9 @@ var usersServiceUrl = "https://localhost:7231/graphql";
 
 builder.Services
         .AddGraphQLServer()
-        .AddQueryType(d => d.Name("Query"))
-        .AddMutationType(d => d.Name("Mutation"))
-        .AddRemoteSchema(WellKnownSchemaNames.Posts, ignoreRootTypes: true)
-        .AddRemoteSchema(WellKnownSchemaNames.Users, ignoreRootTypes: true)
-        .AddRemoteSchema(WellKnownSchemaNames.Comments, ignoreRootTypes: true)
+        .AddRemoteSchema(WellKnownSchemaNames.Posts)
+        .AddRemoteSchema(WellKnownSchemaNames.Users)
+        .AddRemoteSchema(WellKnownSchemaNames.Comments)
         .AddTypeExtensionsFromFile("./Stitching.graphql");
 
 builder.Services.AddHttpClient(WellKnownSchemaNames.Posts, c => c.BaseAddress = new Uri(postsServiceUrl));
