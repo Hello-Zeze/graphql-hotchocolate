@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{D1FE3C15-51B0-4882-B918-1BB7A9496525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserService", "UserService\UserService.csproj", "{D1FE3C15-51B0-4882-B918-1BB7A9496525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostsService", "PostsService\PostsService.csproj", "{5F556972-DD2D-4207-A07C-AA0724E4748D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostsService", "PostsService\PostsService.csproj", "{5F556972-DD2D-4207-A07C-AA0724E4748D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommentsService", "CommentsService\CommentsService.csproj", "{C5C56C08-D67B-45B0-B808-6817A4A6A27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommentsService", "CommentsService\CommentsService.csproj", "{C5C56C08-D67B-45B0-B808-6817A4A6A27B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.Stitching", "Gateway.Stitching\Gateway.Stitching.csproj", "{195B2460-792E-444A-B33C-F4874BA952F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.Stitching", "Gateway.Stitching\Gateway.Stitching.csproj", "{195B2460-792E-444A-B33C-F4874BA952F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "SearchService\SearchService.csproj", "{CAD6AB92-B2B9-4039-B65C-14D635AB227E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{195B2460-792E-444A-B33C-F4874BA952F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{195B2460-792E-444A-B33C-F4874BA952F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{195B2460-792E-444A-B33C-F4874BA952F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
