@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { makeSignalRRealtimeService } from "../services/signalr/SignalRRealtimeService";
 import { RealTimeContextOptions } from "./types";
 
@@ -10,10 +10,13 @@ type RealtimeContextProviderProps = {
 
 export const RealtimeContextProvider: React.FC<RealtimeContextProviderProps> = ({ children }) => {
     const totalViewsSignalRService = makeSignalRRealtimeService();
+    totalViewsSignalRService.consume();
     
-    const contextOptions: RealTimeContextOptions = {
-        registeredServices: [totalViewsSignalRService]
-    };
+    const contextOptions: RealTimeContextOptions = useMemo(() => {
+        return {
+            registeredServices: [totalViewsSignalRService]
+        };
+    }, [totalViewsSignalRService]);
 
     return <RealtimeContext.Provider value={contextOptions}>{children}</RealtimeContext.Provider>;
 }

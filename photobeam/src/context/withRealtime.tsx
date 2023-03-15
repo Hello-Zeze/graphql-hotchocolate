@@ -1,4 +1,5 @@
 import React from "react";
+import SignalRRealtimeService from "../services/signalr/SignalRRealtimeService";
 import { useRealtimeContext } from "./RealTimeContext";
 export interface WithRealtimeProps {
     registerEvent?: (eventName: string, handler: (data: string) => void) => void;
@@ -7,9 +8,15 @@ export interface WithRealtimeProps {
 const withWithRealtime = <P extends object>(WrappedComponent: React.ComponentType<P>): 
 React.FC<P & WithRealtimeProps> => ({...props}: WithRealtimeProps) => {
     const { registeredServices } = useRealtimeContext();
+    const registerEventHandler = (eventName: string, handler: (data: string) => void) => {        
+        window.addEventListener(eventName, (e) => {
+            const { detail } = e as CustomEvent;
+            handler(detail);
+        });
+    };
     return (
         <>
-            <WrappedComponent {...props as P} />
+            <WrappedComponent registerEvent={registerEventHandler} {...props as P} />
         </>
     );
 };
