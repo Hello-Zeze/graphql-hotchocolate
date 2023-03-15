@@ -23,6 +23,7 @@ class SignalRRealtimeService implements IRealtimeService {
 
     onConnectionOpened = () => {
         console.log("[SignalR Service]: Connection Opened");
+        this.connection.send("NewWindowLoaded");
     };
     onConnectionClosed = () => {
         console.log("[SignalR Service]: Connection Closed");
