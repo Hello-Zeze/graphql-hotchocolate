@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import withWithRealtime, { WithRealtimeProps } from "./context/withRealtime";
 
-const TotalViews: React.FC = () => {
+export interface TotalViewsProps extends WithRealtimeProps {}
+
+const TotalViews: React.FC<TotalViewsProps> = ({ registerEvent }) => {
     const [totalViews, setTotalViews] = useState(0);
     return (
         <div>
@@ -10,4 +13,4 @@ const TotalViews: React.FC = () => {
     );
 }
 
-export default TotalViews;
+export default withWithRealtime(TotalViews);
