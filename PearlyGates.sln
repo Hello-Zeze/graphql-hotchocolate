@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommentsService", "Comments
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.Stitching", "Gateway.Stitching\Gateway.Stitching.csproj", "{195B2460-792E-444A-B33C-F4874BA952F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "SearchService\SearchService.csproj", "{CAD6AB92-B2B9-4039-B65C-14D635AB227E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchService", "SearchService\SearchService.csproj", "{CAD6AB92-B2B9-4039-B65C-14D635AB227E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Neo", "Neo", "{47AAA8DE-564A-4DE7-853E-F673FB6F917C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoDataAccess", "NeoDataAccess\NeoDataAccess.csproj", "{DA6AAC40-1634-4C19-A449-F7F157C24BC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{15120B40-4278-4B6C-B878-29DA5ABDCC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonBeam", "PhotonBeam\PhotonBeam.csproj", "{F9254F32-2AC4-4E5D-9A5B-7613908C4974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +47,21 @@ Global
 		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAD6AB92-B2B9-4039-B65C-14D635AB227E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6AAC40-1634-4C19-A449-F7F157C24BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6AAC40-1634-4C19-A449-F7F157C24BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6AAC40-1634-4C19-A449-F7F157C24BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6AAC40-1634-4C19-A449-F7F157C24BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9254F32-2AC4-4E5D-9A5B-7613908C4974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9254F32-2AC4-4E5D-9A5B-7613908C4974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9254F32-2AC4-4E5D-9A5B-7613908C4974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9254F32-2AC4-4E5D-9A5B-7613908C4974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA6AAC40-1634-4C19-A449-F7F157C24BC7} = {47AAA8DE-564A-4DE7-853E-F673FB6F917C}
+		{F9254F32-2AC4-4E5D-9A5B-7613908C4974} = {15120B40-4278-4B6C-B878-29DA5ABDCC49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02DC1DA8-20FC-4BEE-A2CA-81D13E759CD1}
