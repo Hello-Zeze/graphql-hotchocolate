@@ -1,21 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import withWithRealtime, { WithRealtimeProps } from "./context/withRealtime";
 
 export interface TotalViewsProps extends WithRealtimeProps {}
 
 const TotalViews: React.FC<TotalViewsProps> = ({ registerEvent }) => {
+    const registerForEvents = useRef(true);
     const [totalViews, setTotalViews] = useState("");
-    useEffect(() => { // TODO: remember to handle the React 18 double useEffect thing
-        if (registerEvent) {
-            registerEvent("updatedTotalViews", (data:string) => {
-                setTotalViews(data);
-            });
+    const [totalUsers, setTotalUsers] = useState("");
+    useEffect(() => {
+        if (registerForEvents.current) {            
+            if (registerEvent) {
+                registerForEvents.current = false;
+                registerEvent("updatedTotalViews", (data:string) => {
+                    setTotalViews(data);
+                });
+                registerEvent("updatedTotalUsers", (data:string) => {
+                    setTotalUsers(data);
+                });
+            }
         }
     }, [registerEvent]);
     return (
         <div>
-            <div>Total Views:</div>
-            <div>{totalViews}</div>
+            <div>
+                <div>Total Views:</div>
+                <div>{totalViews}</div>
+            </div>
+            <div>
+                <div>Total Users:</div>
+                <div>{totalUsers}</div>
+            </div>
         </div>
     );
 }

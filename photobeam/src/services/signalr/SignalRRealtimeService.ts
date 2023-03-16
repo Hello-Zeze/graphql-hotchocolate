@@ -8,7 +8,8 @@ export const makeSignalRRealtimeService = (): IRealtimeService => {
 class SignalRRealtimeService implements IRealtimeService {
     private readonly connection:HubConnection;
     public static inboundEvents: string[] = [
-        "updatedTotalViews"
+        "updatedTotalViews",
+        "updatedTotalUsers"
     ];
     public static outboundHubEvents: string[] = [
         "NewWindowLoaded"
