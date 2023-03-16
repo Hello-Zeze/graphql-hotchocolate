@@ -2,7 +2,9 @@ import React from "react";
 import SignalRRealtimeService from "../services/signalr/SignalRRealtimeService";
 import { useRealtimeContext } from "./RealTimeContext";
 export interface WithRealtimeProps {
-    registerEvent?: (eventName: string, handler: (data: string) => void) => void;
+    registerEventListener?: (eventName: string, handler: (data: string) => void) => void;
+    removeEventListener?: (eventName: string) => void;
+    publishEvent?: (eventName: string, data: object) => void;
 }
 
 const withWithRealtime = <P extends object>(WrappedComponent: React.ComponentType<P>): 
