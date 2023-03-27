@@ -1,0 +1,11 @@
+﻿extend type Query {
+	me: User! @delegate(schema: "users", path: "user(id: 1)")
+}
+
+extend type Comment {
+	author: User! @delegate(schema: "users", path: "user(id: $fields:createdBy)")
+}
+
+extend type Post {
+	author: User! @delegate(schema: "users", path: "user(id: $fields:createdBy)")
+}

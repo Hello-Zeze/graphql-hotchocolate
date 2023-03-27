@@ -1,0 +1,3 @@
+﻿extend type User {
+	posts: [Post!]! @delegate(schema: "posts", path: "postsByAuthorId(authorId: $fields:id)")
+}

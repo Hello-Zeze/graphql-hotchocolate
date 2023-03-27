@@ -1,0 +1,7 @@
+﻿extend type User {
+	comments: [Comment!]! @delegate(schema: "comments", path: "commentsByAuthorId(authorId: $fields:id)")	
+}
+
+extend type Post {
+	comments: [Comment] @delegate(schema: "comments", path: "commentsByPostId(postId: $fields:id)")
+}
